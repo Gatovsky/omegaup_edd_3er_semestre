@@ -60,4 +60,6 @@ int main(){
     //llamadas de los métodos
     map<char, int> letrasEncontradas = buscarLetras(abecedario, I, F, frase);
     imprimirMap(letrasEncontradas);
+
+    return 0;
 }

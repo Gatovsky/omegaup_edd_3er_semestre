@@ -1,24 +1,25 @@
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
-int f(int n);
-int main(){
-    int n;
-    cin>>n;
-    if(n>=1 && n<=120){
-        f(n);
-    }
-    return 0;
+int ping(int x);
+int pong(int x);
+int ping(int x){
+    if(x > 20) return x;
+    cout << "ping " << x <<endl;
+    pong(x+1);
 }
 
-int f(int n){
-    int p=1;
-    if(n>5){
-        p= 5*f(n-2);
-    }
+int pong(int x){
+    if(x > 20) return x;
+    cout << "pong" << x << endl;
+    ping(x+1);
+}
 
-    cout<< p <<endl;
+int main()
+{
+    int x =1;
+    cout << ping(x);
 
-    return p;
+    return 0;
 }

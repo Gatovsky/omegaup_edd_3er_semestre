@@ -1,0 +1,3 @@
+/home/hector/OmegaUp/testing4/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/hector/OmegaUp/testing4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/hector/OmegaUp/testing4/cmake-build-debug/CMakeFiles/testing4.dir
