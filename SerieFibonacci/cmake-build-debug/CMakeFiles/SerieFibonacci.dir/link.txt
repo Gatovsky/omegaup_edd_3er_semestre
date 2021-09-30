@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/SerieFibonacci.dir/main.cpp.o -o SerieFibonacci 
