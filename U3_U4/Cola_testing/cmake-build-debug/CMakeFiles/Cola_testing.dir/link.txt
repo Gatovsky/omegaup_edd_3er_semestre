@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/Cola_testing.dir/main.cpp.o -o Cola_testing 

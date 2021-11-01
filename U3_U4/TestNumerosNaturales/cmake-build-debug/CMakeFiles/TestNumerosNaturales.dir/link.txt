@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/TestNumerosNaturales.dir/main.cpp.o -o TestNumerosNaturales 

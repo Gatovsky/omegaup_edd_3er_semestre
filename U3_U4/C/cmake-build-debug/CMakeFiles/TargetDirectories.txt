@@ -1,0 +1,3 @@
+/home/hector/OmegaUp_U3yU4/C/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/hector/OmegaUp_U3yU4/C/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/hector/OmegaUp_U3yU4/C/cmake-build-debug/CMakeFiles/C.dir
