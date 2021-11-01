@@ -1,4 +1,4 @@
-# Install script for directory: /home/hector/OmegaUp/G
+# Install script for directory: /home/hector/OmegaUp/U1_U2/G
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/hector/OmegaUp/G/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/hector/OmegaUp/U1_U2/G/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

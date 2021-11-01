@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/hector/OmegaUp/G/main.cpp" "/home/hector/OmegaUp/G/cmake-build-debug/CMakeFiles/G.dir/main.cpp.o"
+  "/home/hector/OmegaUp/U1_U2/G/main.cpp" "/home/hector/OmegaUp/U1_U2/G/cmake-build-debug/CMakeFiles/G.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -1,46 +1,55 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-int main() {
-    int x1, y1, x2, y2, a1, b1, a2, b2;
-    //int poligono1[2][2], poligono2[2][2], interseccion[2][2];
-    //int detPol1, detPol2, detInter;
-    int areaPol1, areaPol2, areaInter;
-    int pCruzPol1, pCruzPol2, pCruzInter;
-    unsigned int areaTotal;
+//buscar la interseccion de los puntos coordenados usando el orden lexico gráfico
+vector<vector<long long>> Intersec(vector<vector<long long>>&R1, vector<vector<long long>>&R2){
+    vector<vector<long long>> array2D;
+    vector<long long> v1, v2;
+    if(max(R1[0][0], R2[0][0]) < min(R1[1][0], R2[1][0]) && max(R1[0][1], R2[0][1]) < min(R1[1][1], R2[1][1])){
+        v1.push_back(max(R1[0][0], R2[0][0])); v1.push_back(max(R1[0][1], R2[0][1]));
+        v2.push_back(min(R1[1][0], R2[1][0])); v2.push_back(min(R1[1][1], R2[1][1]));
+        array2D.push_back(v1); array2D.push_back(v2);
+    };
+    return array2D;
+}
 
+//calcular el área con principio de inclusión y exclusión
+long long Area(vector<vector<long long>>&vect){
+    return (vect[1][0] - vect[0][0]) * (vect[1][1] - vect[0][1]);
+}
 
-    cin >> x1 >> y1 >> x2 >> y2 >> a1 >> b1 >> a2 >> b2;
+int main(){
+    int x1, y1, x2, y2;
+    vector<vector<long long>>R1, R2, Inter;
+    vector<long long>vector1_1D,vector2_1D;
+    long long AR1, AR2, AInter, ATotal;
 
-    /*
-    poligono1[0][0]=x1;
-    poligono1[0][1]=y1;
-    poligono1[1][0]=x2;
-    poligono1[1][1]=y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+    vector1_1D.push_back(x1); vector1_1D.push_back(y1);
+    vector2_1D.push_back(x2); vector2_1D.push_back(y2);
+    R1.push_back(vector1_1D); R1.push_back(vector2_1D);
 
-    poligono2[0][0]=a1;
-    poligono2[0][1]=b1;
-    poligono2[1][0]=a2;
-    poligono2[1][1]=b2;
-    */
+    vector1_1D.clear(); vector2_1D.clear();
 
-    pCruzPol1 = ((x1*y1)+(x2*y2)+(x2*y2)+(x1*y1))+(-(y1*x2)-(y1*x2)-(y2*x1)-(y2*x1));
-    //cout << pCruzPol1 << endl;
-    pCruzPol2 = ((a1*b1)+(a2*b2)+(a2*b2)+(a1*b1))+(-(b1*a2)-(b1*a2)-(b2*a1)-(b2*a1));
-    //cout << pCruzPol2 << endl;
-    pCruzInter =((a1*b1)+(x2*y2)+(x2*y2)+(a1*b1))+(-(b1*x2)-(b1*x2)-(y2*a1)-(y2*a1));
-    //cout << pCruzInter << endl;
+    cin >> x1 >> y1 >> x2 >> y2;
+    vector1_1D.push_back(x1); vector1_1D.push_back(y1);
+    vector2_1D.push_back(x2); vector2_1D.push_back(y2);
+    R2.push_back(vector1_1D); R2.push_back(vector2_1D);
 
-    areaPol1 = pCruzPol1/2;
-    areaPol2 = pCruzPol2/2;
-    areaInter = pCruzInter/2;
-    areaTotal = (areaPol1+areaPol2)-areaInter;
+    Inter=Intersec(R1,R2);
 
-    cout << areaTotal << endl;
+    AR1 = Area(R1);
+    //cout << "AR1: " << AR1 << endl;
+    AR2 = Area(R2);
+    //cout << "AR2: " << AR2 << endl;
+    if(!Inter.empty()){
+        AInter= Area(Inter);
+    } else AInter=0;
+    //cout << "AInter: " << AInter << endl;
 
-    //cout<<poligono1[0][0] <<poligono1[0][1]<<poligono1[1][0]<<poligono1[1][1] <<endl;
-    //cout<<poligono2[0][0] <<poligono2[0][1]<<poligono2[1][0]<<poligono2[1][1] <<endl;
+    ATotal = abs(AR1+AR2-AInter);
 
+    cout << ATotal;
 
     return 0;
 }
