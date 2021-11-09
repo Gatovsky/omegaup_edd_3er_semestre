@@ -1,4 +1,4 @@
-/home/hector/opt/clion2021/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/hector/OmegaUp_U3yU4/C
+/home/hector/opt/clion2021/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/hector/OmegaUp/U3_U4/C
 -- The C compiler identification is GNU 11.2.1
 -- The CXX compiler identification is GNU 11.2.1
 -- Detecting C compiler ABI info
@@ -13,4 +13,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/hector/OmegaUp_U3yU4/C/cmake-build-debug
+-- Build files have been written to: /home/hector/OmegaUp/U3_U4/C/cmake-build-debug
