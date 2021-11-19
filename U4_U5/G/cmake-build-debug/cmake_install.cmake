@@ -1,4 +1,4 @@
-# Install script for directory: /home/hector/OmegaUp/U4_U5/G
+# Install script for directory: /home/hra-SuSe/omegaup_edd_3er_semestre/U4_U5/G
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/hector/OmegaUp/U4_U5/G/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/hra-SuSe/omegaup_edd_3er_semestre/U4_U5/G/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

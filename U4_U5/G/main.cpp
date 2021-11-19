@@ -1,27 +1,32 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(){
 
-    int numero[]={15,12,14,13,11};
-    int i,posicion,aux;
+int main() {
+    int numero, aux, instancias;
+    vector<int> vect;
 
-    for(i=0;i<5;i++){
-        posicion = i;
-        aux = numero[i];
+    cin >> instancias;
+    while(instancias>0){
+        cin >> numero;
+        vect.push_back(numero);
 
-        while((posicion > 0) && (numero[posicion-1] > aux)){
-            numero[posicion]= numero[posicion - 1];
-            posicion--;
+        instancias--;
+    }
+
+
+    for(int i=0; i < vect.size(); i++){
+        for(int j=i+1; j<vect.size();j++){
+            if(vect[i]> vect[j]){
+                aux = vect[i];
+                vect[i]=vect[j];
+                vect[j]=aux;
+            }
         }
-        numero[posicion] =aux;
     }
 
-    cout<<"orden: ";
-    for(i=0;i<5;i++){
-        cout<<numero[i]<<" ";
+    for(auto i : vect){
+        cout << i << " ";
     }
-
     return 0;
 }
